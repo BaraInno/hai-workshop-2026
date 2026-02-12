@@ -956,6 +956,54 @@ p { margin-bottom: 1rem; }
 .principle-card h4 { margin-bottom: 0.3rem; }
 .principle-card p { font-size: 0.92rem; color: var(--graphite-light); margin-bottom: 0; }
 
+/* Tools section (Dashboard) */
+.dashboard-section .section-intro {
+    max-width: 560px;
+    margin-bottom: 1.5rem;
+    color: var(--graphite-light);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+.tools-block {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--solar-gold);
+}
+.tools-block h3 {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+}
+.tools-sub {
+    margin: 1rem 0 0.35rem 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--graphite);
+}
+.tools-sub:first-of-type { margin-top: 0.5rem; }
+.tools-list {
+    margin: 0 0 0.5rem 0;
+    padding-left: 1.25rem;
+    font-size: 0.92rem;
+    color: var(--graphite-light);
+}
+.tools-list li { margin-bottom: 0.2rem; }
+.tools-note {
+    margin: 0.5rem 0 0;
+    font-size: 0.88rem;
+    color: var(--graphite-light);
+    font-style: italic;
+}
+.tools-arena {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--soft-sand);
+    border-radius: var(--radius-md);
+}
+.tools-arena p { margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--graphite); }
+.tools-arena .btn { margin-top: 0.25rem; }
+
 /* Final equation */
 .final-equation {
     text-align: center;
