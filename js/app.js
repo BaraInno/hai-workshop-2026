@@ -603,6 +603,23 @@ function shareCertificate() {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.origin)}&title=${text}`, '_blank');
 }
 
+// === Reset All Progress ===
+function resetAllProgress() {
+    if (confirm('Wirklich alles zurücksetzen? Dein gesamter Fortschritt wird gelöscht.')) {
+        localStorage.removeItem('hai_progress');
+        localStorage.removeItem('hai_user_name');
+        window.location.href = 'index.html';
+    }
+}
+
+// Wire up reset links
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.reset-progress-link')) {
+        e.preventDefault();
+        resetAllProgress();
+    }
+});
+
 // === Section Tabs (scroll-to + highlight active) ===
 function initSectionTabs() {
     const tabs = document.querySelectorAll('.section-tab[data-etappe]');
@@ -646,7 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Page-specific init
     if (document.body.dataset.page === 'hub') initHub();
-    if (document.body.dataset.page === 'dashboard') { initDashboard(); initCertificate(); }
+    if (document.body.dataset.page === 'dashboard') { initDashboard(); }
 
     // Update chapter progress on page load
     updateChapterProgress();
