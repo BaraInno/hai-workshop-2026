@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaktorAI | HAI 2026 Workshop</title>
+    <meta name="description" content="Dein interaktiver Workshop-Begleiter für den HAI 2026 AI-Teil. Baue deinen persönlichen FaktorAI auf.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="hub">
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <a href="index.html" class="top-nav-logo">Faktor<span>AI</span></a>
+            <div class="top-nav-right">
+                <a href="dashboard.html" class="top-nav-back">Dashboard →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hub-hero">
+        <div class="container">
+            <!-- Greeting / Name Input -->
+            <div id="hubGreeting" class="hub-greeting hidden"></div>
+            <div class="name-input-wrap">
+                <input type="text" id="nameInput" placeholder="Wie heißt du?" autocomplete="given-name">
+                <button class="btn btn-primary" id="nameBtn">Los geht's →</button>
+            </div>
+            <a href="#" id="changeName" class="text-small text-muted hidden" style="margin-bottom:1.5rem;display:inline-block;">Nicht du? Namen ändern</a>
+
+            <h1>Dein <span class="text-gold">FaktorAI</span></h1>
+            <p class="subtitle">Drei Bereiche. Ein Ziel: KI wird zu deinem persönlichen Verstärker.</p>
+        </div>
+    </section>
+
+    <!-- Equation Display -->
+    <section class="equation-display container scroll-animate">
+        <div class="equation-main">
+            HAI = <span class="eq-highlight">Ich</span> × FaktorAI
+        </div>
+        <p class="equation-sub">„Nur wenn du weißt, was du willst, kann KI dich verstärken."</p>
+        <div class="equation-detail">
+            <span>FaktorAI =</span>
+            <span class="eq-icon">🎯</span><span>Zielbild</span>
+            <span class="eq-multiply">×</span>
+            <span class="eq-icon">💪</span><span>Fitness</span>
+            <span class="eq-multiply">×</span>
+            <span class="eq-icon">🔥</span><span>Leidenschaft</span>
+        </div>
+    </section>
+
+    <!-- Hub Cards -->
+    <section class="container-wide">
+        <div class="hub-cards">
+            <!-- Card 1: KI-Zielbild -->
+            <a href="zielbild.html" class="hub-card hub-card-gold scroll-animate">
+                <div class="hub-card-emoji">🎯</div>
+                <h3>KI-Zielbild</h3>
+                <p class="card-subtitle">Was will ich KI abgeben?</p>
+                <p class="card-desc">Finde heraus, wo KI dir im Alltag am meisten helfen kann – und erstelle deine persönliche KI-Wunschliste.</p>
+                <div class="card-progress">
+                    <div class="card-progress-bar"><div class="card-progress-fill" style="width:0%"></div></div>
+                    <span class="card-progress-text">0/7 Schritte</span>
+                </div>
+                <span class="btn btn-primary btn-sm">Starten →</span>
+            </a>
+
+            <!-- Card 2: KI-Fitness -->
+            <a href="fitness.html" class="hub-card hub-card-teal scroll-animate">
+                <div class="hub-card-emoji">💪</div>
+                <h3>KI-Fitness</h3>
+                <p class="card-subtitle">Kann ich es KI abgeben?</p>
+                <p class="card-desc">Lerne die Skills, um KI richtig einzusetzen – vom Prompting über Context bis zu deinem ersten Assistenten.</p>
+                <div class="card-progress">
+                    <div class="card-progress-bar"><div class="card-progress-fill" style="width:0%"></div></div>
+                    <span class="card-progress-text">0/12 Schritte</span>
+                </div>
+                <span class="btn btn-secondary btn-sm">Starten →</span>
+            </a>
+
+            <!-- Card 3: Leidenschaft -->
+            <a href="leidenschaft.html" class="hub-card hub-card-orange scroll-animate">
+                <div class="hub-card-emoji">🔥</div>
+                <h3>Leidenschaft</h3>
+                <p class="card-subtitle">Der Boost-Faktor</p>
+                <p class="card-desc">Nutze KI nicht nur zum Entlasten – sondern als Verstärker für das, wofür du wirklich brennst.</p>
+                <div class="card-progress">
+                    <div class="card-progress-bar"><div class="card-progress-fill" style="width:0%"></div></div>
+                    <span class="card-progress-text">0/5 Schritte</span>
+                </div>
+                <span class="btn btn-ghost btn-sm">Starten →</span>
+            </a>
+        </div>
+
+        <p class="hub-footer-note scroll-animate">
+            Die Formel funktioniert wie eine Multiplikation: Wenn einer der Faktoren Null ist, ist das Ergebnis Null. Heute arbeiten wir daran, alle drei Faktoren über Null zu bringen – und <strong>Leidenschaft</strong> kann alles auf ein ganz neues Level heben.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align:center;padding:2rem;font-size:0.85rem;color:var(--graphite-lighter);">
+        HAI 2026 · Human & Artificial Intelligence · Workshop
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
