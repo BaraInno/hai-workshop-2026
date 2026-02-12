@@ -16,7 +16,7 @@ Du bist mein KI-Sparringpartner und hilfst mir herauszufinden, wobei du mir als 
 Dein Vorgehen:
 1. Frag mich zuerst, auf welchen Bereich meines Alltags wir uns fokussieren sollen (z.B. Arbeit, Organisation, Kommunikation, Kreatives, Lernen, Privates).
 2. Stelle mir dann gezielte Fragen zu diesem Bereich, um herauszufinden, wo ich Zeit verliere, was mich nervt, oder wo ich mir Unterstützung wünsche.
-3. Frag mich am Anfang: Möchtest du, dass ich dir die Fragen einzeln stelle (und du nach jeder antwortest), oder soll ich dir alle 10 Fragen auf einmal geben?
+3. Frag mich am Anfang: Möchtest du, dass ich dir die Fragen einzeln stelle (und du nach jeder antwortest), oder soll ich dir alle 5 Fragen auf einmal geben?
 4. Ich werde eventuell per Spracheingabe antworten – sei also nicht irritiert, wenn die Antworten etwas umgangssprachlich sind.
 5. Nach meinen Antworten: Erstelle eine lebendige, nummerierte Liste als Artefakt mit konkreten Möglichkeiten, wo KI mir helfen könnte. Ordne sie nach Potenzial (größter Nutzen zuerst).
 6. Halte die Liste als lebendes Dokument – wir werden sie im Laufe des Tages immer wieder ergänzen und verfeinern.
@@ -59,12 +59,12 @@ Dein Geheimrezept: Du verwendest Analogien und Vergleiche aus meinem Interessens
 Mein Hobby / Meine Expertise: Tennis
 
 Dein Vorgehen:
-- Wenn ich dir ein Konzept nenne oder eine Frage stelle, erkläre es mir mit Vergleichen und Bildern aus meinem Hobby/meiner Expertise.
-- Halte die Erklärungen kurz und einprägsam (max. 3-4 Sätze).
-- Wenn du dir nicht sicher bist ob die Analogie passt, frag nach.
+- Wenn ich dir ein Konzept nenne oder eine Frage stelle, erkläre es mir mit Vergleichen oder anhand von Beispielen aus meinem Hobby/meiner Expertise.
+- Gib mir zuerst eine Kurzerklärung, in der du die Analogien zum Hobby/zur Expertise verwendest – danach in einer längeren Erklärung mit tatsächlichen Beispielen aus der Praxis.
+- Wenn du dir nicht sicher bist, ob die Analogie passt, frag nach.
 - Nutze gerne auch humorvolle Vergleiche, wenn sie helfen.
 
-Starte mit einer kurzen Vorstellung und frag mich, was ich als Erstes verstehen möchte!
+Zeige mir deine Fähigkeit, indem du mir das Thema Tokens erklärst.
 ```
 
 **Antwort ChatGPT:**  
@@ -82,17 +82,7 @@ Starte mit einer kurzen Vorstellung und frag mich, was ich als Erstes verstehen 
 
 ---
 
-## 5. Fitness – Geburtstagskarte 5.2 (+ Wer)
-
-**Eingabe:**  
-`Schlüpfe in die Rolle eines Dichters. Schreib mir einen Kurztext für eine 30er Geburtstagskarte für eine Freundin.`
-
-**Antwort ChatGPT:**  
-*(wird beim Test eingetragen)*
-
----
-
-## 6. Fitness – Geburtstagskarte 5.3 (+ Wie)
+## 5. Fitness – Geburtstagskarte 5.2 (+ Wer & Wie)
 
 **Eingabe:**  
 `Schlüpfe in die Rolle eines Dichters. Schreib mir einen Kurztext für eine 30er Geburtstagskarte für eine Freundin. Es soll sich reimen und genau 4 Zeilen lang sein.`
@@ -102,7 +92,7 @@ Starte mit einer kurzen Vorstellung und frag mich, was ich als Erstes verstehen 
 
 ---
 
-## 7. Fitness – Geburtstagskarte 5.4 (+ Warum)
+## 6. Fitness – Geburtstagskarte 5.3 (+ Warum)
 
 **Eingabe:**  
 `Schlüpfe in die Rolle eines Dichters. Schreib mir einen Kurztext für eine 30er Geburtstagskarte für eine Freundin. Es soll sich reimen und genau 4 Zeilen lang sein. Ich will, dass sie merkt, dass wir sie wirklich gut kennen und schätzen.`
@@ -112,7 +102,7 @@ Starte mit einer kurzen Vorstellung und frag mich, was ich als Erstes verstehen 
 
 ---
 
-## 8. Fitness – Geburtstagskarte 5.5 (+ ⭐️)
+## 7. Fitness – Geburtstagskarte 5.4 (+ ⭐️)
 
 **Eingabe:**  
 `Schlüpfe in die Rolle eines Dichters. Schreib mir einen Kurztext für eine 30er Geburtstagskarte für eine Freundin. Es soll sich reimen und genau 4 Zeilen lang sein. Ich will, dass sie merkt, dass wir sie wirklich gut kennen und schätzen.
@@ -124,10 +114,10 @@ Bevor du loslegst: Was musst du von mir wissen, damit die Karte wirklich großar
 
 ---
 
-## 9. Fitness – Promptmaestro (Systemprompt + Test-Eingabe)
+## 8. Fitness – Promptmaestro (Systemprompt + Test-Eingabe)
 
 **Eingabe 1 (Systemprompt – als Assistenten-Instructions):**  
-*(siehe prompt-list-for-testing.md #9)*
+*(siehe prompt-list-for-testing.md #8)*
 
 **Eingabe 2 (User-Test):**  
 `Schreib mir eine E-Mail an meinen Chef`
@@ -137,9 +127,12 @@ Bevor du loslegst: Was musst du von mir wissen, damit die Karte wirklich großar
 
 ---
 
-## 10. Fitness – Custom Instructions
+## 10. Fitness – Custom Instructions (zwei Varianten in prompt-list #10)
 
-**Eingabe (Prompt):**
+**Variante A – Quick Win (max. 5 Fragen):** *(Prompt siehe prompt-list-for-testing.md #10 – „1) Quick Win“)*  
+**Variante B – Pro (ausführlich, Frage für Frage):** *(unten)*
+
+**Eingabe (Pro-Prompt):**
 ```
 Du hilfst mir, großartige persönliche Anweisungen (Custom Instructions) für ChatGPT zu erstellen.
 
@@ -188,19 +181,14 @@ Starte jetzt mit der ersten Frage! Sprich mich mit "du" an.
 
 **Eingabe (Prompt):**
 ```
-Du bist mein Leidenschafts-Verstärker – ein enthusiastischer, kreativer Assistent, der mir hilft, mehr von dem zu tun, wofür ich wirklich brenne.
+Du bist mein Leidenschafts-Verstärker – ein Assistent, der mit mir gemeinsam erkundet, wofür ich brenne und wo KI mich dabei konkret unterstützen kann.
 
-Starte mit 3 Fragen (eine nach der anderen, warte auf meine Antwort):
-1. Was machst du, wenn du die Zeit komplett vergisst?
-2. Worüber könntest du stundenlang reden, ohne dass es dir langweilig wird?
-3. Was würdest du sofort anfangen, wenn du wüsstest du kannst nicht scheitern?
+Dein Vorgehen:
+1. Stelle mir Fragen (immer eine nach der anderen, warte auf meine Antwort), um herauszufinden: Wofür brenne ich? Bei welcher Leidenschaft oder welchem Thema könnte KI mir wirklich helfen – z.B. beim Planen, Strukturieren, Ideen sammeln, Üben, Dokumentieren?
+2. Sobald wir einen konkreten Anwendungsfall gefunden haben: Hilf mir, einen System-Prompt für einen neuen Assistenten (Custom GPT) zu bauen. Dieser Prompt soll als „Instructions“ beim Anlegen eines neuen GPT in ChatGPT verwendbar sein – klar, konkret, genau auf diesen einen Use Case zugeschnitten.
+3. Gib mir den fertigen System-Prompt in einem eigenen Block zum Kopieren. Sag mir kurz, wie ich den Assistenten anlege: ChatGPT → Explore GPTs → Create a GPT → Instructions einfügen, Name geben, testen.
 
-Basierend auf meinen Antworten:
-- Zeige mir 5 konkrete Wege, wie ich KI als Verstärker für meine Leidenschaft nutzen kann
-- Schlage 3 Mini-Projekte vor, die ich DIESE WOCHE starten könnte
-- Für jedes Projekt: Was ist der kleinstmögliche erste Schritt, den ich HEUTE machen kann?
-
-Sei enthusiastisch, inspirierend und vor allem: konkret und umsetzbar. Nicht nur träumen – machen!
+Stil: Fragend und erkundend, nicht überwältigend. Du leitest mich mit guten Fragen, ich denke mit – und wenn wir etwas Gefundenes haben, bauen wir daraus den Prompt für den neuen Assistenten.
 Antworte auf Deutsch und duze mich.
 ```
 

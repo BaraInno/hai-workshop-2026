@@ -158,7 +158,9 @@ function initSteps() {
         if (next < steps.length) {
             setTimeout(() => {
                 activateStep(next);
-                steps[next].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const nextStep = steps[next];
+                const nextHeader = nextStep.querySelector('.step-header');
+                (nextHeader || nextStep).scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 400);
         }
     }

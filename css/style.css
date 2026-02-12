@@ -501,7 +501,9 @@ p { margin-bottom: 1rem; }
 /* --- Step Accordion --- */
 .steps-container { margin-top: 1rem; }
 
+/* Scroll-Margin: nächste Box beim Öffnen mit Oberkante sichtbar (nicht unter Nav) */
 .step {
+    scroll-margin-top: 5rem;
     background: var(--white);
     border-radius: var(--radius-lg);
     margin-bottom: 1rem;
@@ -566,6 +568,11 @@ p { margin-bottom: 1rem; }
 .step.completed.expanded .step-content {
     max-height: 5000px;
     padding: 0 1.5rem 1.5rem;
+}
+/* Erledigte Steps: beim Aufklappen alle Subschritte sichtbar (zum Zurückblättern) */
+.step.completed.expanded .sub-step .sub-step-content {
+    max-height: 3000px;
+    padding: 0 1rem 1rem;
 }
 
 .step-content p { margin-bottom: 0.8rem; line-height: 1.7; }
@@ -1244,6 +1251,20 @@ details.more-info .details-content ul { font-size: 0.92rem; color: var(--graphit
 }
 .hack-card .hack-content p { margin-bottom: 0.5rem; }
 .hack-card .hack-content ul { margin: 0.3rem 0 0.5rem 1.2rem; font-size: 0.9rem; }
+.hack-formats-grid {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+@media (min-width: 640px) {
+    .hack-formats-grid { grid-template-columns: 1fr 1fr; }
+}
+.hack-formats-col { font-size: 0.9rem; }
+.hack-formats-col strong { display: block; margin-bottom: 0.4rem; color: var(--graphite); }
+.hack-formats-col ul { margin: 0 0 0 1rem; padding-left: 0.5rem; }
+
+.step-content .option-label { margin-top: 1.5rem; margin-bottom: 0.4rem; }
+.step-content .option-label:first-of-type { margin-top: 0; }
 
 /* --- Utility --- */
 .mt-1 { margin-top: 0.5rem; }
