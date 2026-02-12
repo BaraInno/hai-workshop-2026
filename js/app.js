@@ -29,7 +29,8 @@ function setStepDone(area, step) {
 function getAreaStepsDone(area) {
     const p = getProgress();
     if (!p[area]) return 0;
-    return Object.values(p[area]).filter(v => v === true).length;
+    // Only count main steps (step1, step2, ...) – NOT sub-steps (step5_5a, etc.)
+    return Object.entries(p[area]).filter(([k, v]) => v === true && /^step\d+$/.test(k)).length;
 }
 function getTotalDone() {
     const p = getProgress();
