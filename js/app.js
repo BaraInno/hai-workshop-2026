@@ -137,8 +137,8 @@ function initSteps() {
         const overlay = document.getElementById('block-success-overlay');
         if (overlay && (
             (area === 'zielbild' && stepId === 'step5') ||
-            (area === 'fitness' && stepId === 'step12') ||
-            (area === 'leidenschaft' && stepId === 'step5')
+            (area === 'fitness' && stepId === 'step11') ||
+            (area === 'leidenschaft' && stepId === 'step4')
         )) {
             setTimeout(() => {
                 overlay.classList.add('visible');
@@ -456,8 +456,8 @@ function initHub() {
 function updateHubCards() {
     const areas = {
         zielbild: { total: 5, selector: '.hub-card-gold' },
-        fitness: { total: 12, selector: '.hub-card-teal' },
-        leidenschaft: { total: 5, selector: '.hub-card-orange' },
+        fitness: { total: 11, selector: '.hub-card-teal' },
+        leidenschaft: { total: 4, selector: '.hub-card-orange' },
     };
     for (const [area, config] of Object.entries(areas)) {
         const done = getAreaStepsDone(area);
@@ -485,8 +485,8 @@ function initDashboard() {
 function renderTaskOverview() {
     const areas = {
         zielbild: ['step1','step2','step3','step4','step5'],
-        fitness: ['step1','step2','step3','step4','step5','step6','step7','step8','step9','step10','step11','step12'],
-        leidenschaft: ['step1','step2','step3','step4','step5'],
+        fitness: ['step1','step2','step3','step4','step5','step6','step7','step8','step9','step10','step11'],
+        leidenschaft: ['step1','step2','step3','step4'],
     };
     for (const [area, steps] of Object.entries(areas)) {
         const col = document.querySelector(`.task-column[data-area="${area}"]`);
@@ -530,7 +530,7 @@ function generateCertificate() {
 
     const name = getUserName() || 'Teilnehmer:in';
     const done = getTotalDone();
-    const total = 24;
+    const total = 20;
     const today = new Date().toLocaleDateString('de-AT', { year: 'numeric', month: 'long', day: 'numeric' });
 
     // Background
@@ -572,8 +572,8 @@ function generateCertificate() {
     // Three pillars
     const pillars = [
         { emoji: '🎯', label: 'KI-Zielbild', done: getAreaStepsDone('zielbild'), total: 7 },
-        { emoji: '💪', label: 'KI-Fitness', done: getAreaStepsDone('fitness'), total: 12 },
-        { emoji: '🔥', label: 'Leidenschaft', done: getAreaStepsDone('leidenschaft'), total: 5 },
+        { emoji: '💪', label: 'KI-Fitness', done: getAreaStepsDone('fitness'), total: 11 },
+        { emoji: '🔥', label: 'Leidenschaft', done: getAreaStepsDone('leidenschaft'), total: 4 },
     ];
     let px = 80;
     pillars.forEach(p => {
