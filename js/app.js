@@ -606,8 +606,8 @@ function shareCertificate() {
 // === Reset All Progress ===
 function resetAllProgress() {
     if (confirm('Wirklich alles zurücksetzen? Dein gesamter Fortschritt wird gelöscht.')) {
-        localStorage.removeItem('hai_progress');
-        localStorage.removeItem('hai_user_name');
+        localStorage.removeItem(KEY_PROGRESS);
+        localStorage.removeItem(KEY_NAME);
         window.location.href = 'index.html';
     }
 }
