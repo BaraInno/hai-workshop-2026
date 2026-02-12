@@ -134,22 +134,70 @@ Bevor du loslegst: Was musst du von mir wissen, damit die Karte wirklich großar
 
 **Eingabe (Pro-Prompt):**
 ```
-Du hilfst mir, großartige persönliche Anweisungen (Custom Instructions) für ChatGPT zu erstellen.
+Du bist ein Prompt-Engineering-Experte.
 
-Dein Vorgehen:
-1. Stelle mir Fragen zu diesen Bereichen – eine Frage nach der anderen, warte immer auf meine Antwort:
-   - Was ich beruflich mache und in welcher Branche ich arbeite
-   - Welche Art von Aufgaben ich typischerweise mit KI bearbeite oder bearbeiten möchte
-   - Wie Antworten formatiert sein sollen (Länge, Stil, Sprache)
-   - Welchen Ton ich bevorzuge (formell, locker, direkt...)
-   - Was ich auf keinen Fall will (z.B. Floskeln, zu lange Texte, unnötige Emojis)
-   - Besondere Expertise oder Hintergrund, den die KI wissen sollte
-2. Ich werde eventuell per Spracheingabe antworten – fass das Wichtigste zusammen.
-3. Am Ende: Fasse alles in einer kompakten Zusammenfassung zusammen, die ich direkt als Custom Instructions verwenden kann.
+Deine Aufgabe:
+Hilf mir, maßgeschneiderte, hochqualitative Custom Instructions für ChatGPT zu erstellen.
 
-WICHTIG: Die finale Zusammenfassung darf MAXIMAL 1.500 Zeichen lang sein (das ist das Zeichenlimit). Halte es knackig und priorisiere das Wichtigste.
+Wichtig:
+Erstelle NICHT sofort die Instructions.
+Führe zuerst ein strukturiertes Interview mit mir durch.
 
-Starte jetzt mit der ersten Frage! Sprich mich mit "du" an.
+Ziel:
+Die Custom Instructions sollen:
+- strategisches Denken fördern
+- Halluzinationen minimieren
+- klare Output-Qualität definieren
+- meinen bevorzugten Denk- & Arbeitsstil widerspiegeln
+- generische Antworten verhindern
+- unnötigen Smalltalk vermeiden
+
+Schritt 1 – Analyse & Interview
+
+Stelle mir gezielte Fragen zu folgenden Bereichen:
+1. Hauptanwendungsfälle (Top 3–5)
+2. Denkmodus (z.B. kritisch, systemisch, kreativ, strategisch)
+3. Output-Präferenzen (Struktur, Tabellen, Bulletpoints, Zusammenfassungen etc.)
+4. Interaktionsstil (Du/Sie, Rückfragen, Anzahl Optionen etc.)
+5. No-Gos (Was darf auf keinen Fall passieren?)
+6. Qualitätsanspruch (z.B. Unsicherheiten kennzeichnen, keine erfundenen Quellen)
+7. Referenzstil (z.B. Denkweise à la Adam Grant, Brené Brown etc.)
+
+Stelle nur Fragen, die wirklich relevant sind.
+Vermeide redundante oder triviale Fragen.
+
+Schritt 2 – Synthese
+
+Sobald du genügend Informationen hast:
+- Analysiere meine Antworten
+- Verdichte sie
+- Identifiziere implizite Muster
+- Schärfe unklare Formulierungen
+
+Schritt 3 – Erstelle die Custom Instructions
+
+Erstelle:
+A) Eine kompakte Version (max. 1500 Zeichen)
+B) Eine erweiterte High-Performance-Version
+
+Struktur:
+1. Rolle des Assistenten
+2. Denkprinzipien
+3. Output-Standards
+4. Interaktionsregeln
+5. No-Gos
+6. Qualitätsgarantien
+
+Regeln:
+- Keine generischen Floskeln
+- Keine KI-Disclaimer
+- Keine erfundenen Fakten
+- Präzise Sprache
+- Klar strukturierte Formatierung
+- Direkt kopierbar
+
+Am Ende:
+Gib eine kurze Erklärung, warum diese Instructions stark sind.
 ```
 
 **Antwort ChatGPT:**  

@@ -644,6 +644,7 @@ p { margin-bottom: 1rem; }
     border-radius: var(--radius-md);
     overflow: hidden;
     margin: 1.2rem 0;
+    scroll-margin-top: 5rem; /* Beim Scroll-Ziel: Oberkante bleibt unter fixer Nav sichtbar */
 }
 .prompt-box-header {
     display: flex;
@@ -1262,6 +1263,7 @@ details.more-info .details-content ul { font-size: 0.92rem; color: var(--graphit
 .hack-formats-col { font-size: 0.9rem; }
 .hack-formats-col strong { display: block; margin-bottom: 0.4rem; color: var(--graphite); }
 .hack-formats-col ul { margin: 0 0 0 1rem; padding-left: 0.5rem; }
+.hack-formats-col .format-name { white-space: nowrap; } /* Emoji + Typename immer zusammen */
 
 .step-content .option-label { margin-top: 1.5rem; margin-bottom: 0.4rem; }
 .step-content .option-label:first-of-type { margin-top: 0; }

@@ -159,8 +159,10 @@ function initSteps() {
             setTimeout(() => {
                 activateStep(next);
                 const nextStep = steps[next];
-                const nextHeader = nextStep.querySelector('.step-header');
-                (nextHeader || nextStep).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Zum ganzen Step scrollen, damit scroll-margin-top der .step greift (Nav verdeckt sonst den oberen Teil)
+                const firstPromptBox = nextStep.querySelector('.prompt-box');
+                const scrollTarget = firstPromptBox || nextStep;
+                scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 400);
         }
     }
