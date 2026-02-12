@@ -979,6 +979,144 @@ p { margin-bottom: 1rem; }
     .name-input-wrap input { width: 100%; }
 }
 
+/* --- Details / More Info Toggle --- */
+details.more-info {
+    margin: 1rem 0;
+}
+details.more-info summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--graphite-lighter);
+    padding: 0.3rem 0;
+    list-style: none;
+    transition: var(--transition);
+    user-select: none;
+}
+details.more-info summary::-webkit-details-marker { display: none; }
+details.more-info summary::before {
+    content: '▸';
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+details.more-info[open] summary::before { transform: rotate(90deg); }
+details.more-info summary:hover { color: var(--deep-teal); }
+details.more-info .details-content {
+    margin-top: 0.8rem;
+    padding-left: 0.8rem;
+    border-left: 2px solid var(--border-light);
+    animation: detailsFadeIn 0.3s ease;
+}
+@keyframes detailsFadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+details.more-info .details-content p { font-size: 0.92rem; color: var(--graphite-light); }
+details.more-info .details-content ul { font-size: 0.92rem; color: var(--graphite-light); }
+
+/* --- Visual Hero Elements (for presentation slides) --- */
+.visual-hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 0.5rem 0 1rem;
+}
+.visual-hero-numbers {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--deep-teal);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+.visual-hero-numbers .hero-question {
+    color: var(--gold);
+}
+.visual-hero-stat {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 10vw, 5rem);
+    color: var(--passion-orange);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+.visual-hero-stat-label {
+    font-size: 1rem;
+    color: var(--graphite-light);
+    max-width: 350px;
+    margin: 0 auto;
+}
+.visual-hero-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+.visual-hero-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--graphite-light);
+}
+.visual-hero-icon-item .icon-big { font-size: 1.8rem; }
+
+/* Visual flashlight for WWW */
+.visual-flashlight {
+    text-align: center;
+    margin: 1rem 0 1.5rem;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* Left-aligned info-box variant */
+.info-box.left-aligned { text-align: left; }
+.info-box.left-aligned h4 { text-align: left; }
+.info-box.left-aligned p { text-align: left; }
+
+/* Hack card (compact) */
+.hack-cards {
+    display: grid;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+.hack-card {
+    background: var(--teal-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+.hack-card summary {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--deep-teal);
+    list-style: none;
+    transition: var(--transition);
+}
+.hack-card summary::-webkit-details-marker { display: none; }
+.hack-card summary::after {
+    content: '▸';
+    margin-left: auto;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+    color: var(--graphite-lighter);
+}
+.hack-card[open] summary::after { transform: rotate(90deg); }
+.hack-card summary:hover { background: rgba(13,95,111,0.08); }
+.hack-card .hack-content {
+    padding: 0 1rem 1rem;
+    font-size: 0.92rem;
+    color: var(--graphite-light);
+    animation: detailsFadeIn 0.3s ease;
+}
+.hack-card .hack-content p { margin-bottom: 0.5rem; }
+.hack-card .hack-content ul { margin: 0.3rem 0 0.5rem 1.2rem; font-size: 0.9rem; }
+
 /* --- Utility --- */
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
