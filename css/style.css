@@ -307,7 +307,7 @@ p { margin-bottom: 1rem; }
     color: var(--graphite-light);
 }
 .equation-detail .eq-icon { font-size: 1.6rem; }
-.equation-detail .eq-multiply { color: var(--graphite-light); font-size: 1.2rem; }
+.equation-detail .eq-multiply { color: var(--graphite); font-size: 1.2rem; font-weight: 600; }
 
 /* Hub cards */
 .hub-cards {
