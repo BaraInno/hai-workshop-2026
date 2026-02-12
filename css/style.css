@@ -460,8 +460,17 @@ p { margin-bottom: 1rem; }
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
+    padding: 0.6rem 0;
     flex-wrap: wrap;
+    position: sticky;
+    top: 52px;
+    z-index: 50;
+    background: rgba(250, 248, 246, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
 }
 .section-tab {
     padding: 0.6rem 1.2rem;
@@ -977,6 +986,96 @@ p { margin-bottom: 1rem; }
 @media (max-width: 480px) {
     .name-input-wrap { flex-direction: column; }
     .name-input-wrap input { width: 100%; }
+}
+
+/* --- Etappe Header --- */
+.etappe-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    margin: 0.5rem 0 0.8rem;
+    border-radius: var(--radius-md);
+    background: var(--soft-sand);
+    border-left: 4px solid var(--deep-teal);
+}
+.etappe-header .etappe-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+.etappe-header .etappe-body {
+    flex: 1;
+    min-width: 0;
+}
+.etappe-header .etappe-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--graphite-lighter);
+    margin-bottom: 0.1rem;
+}
+.etappe-header .etappe-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    color: var(--graphite);
+    line-height: 1.3;
+}
+.etappe-header .etappe-meta {
+    font-size: 0.8rem;
+    color: var(--graphite-lighter);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* --- Checkpoint / Verschnaufpause --- */
+.checkpoint {
+    text-align: center;
+    padding: 1.8rem 1.5rem;
+    margin: 1.2rem 0;
+    position: relative;
+}
+.checkpoint-dots {
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    color: var(--border);
+    margin-bottom: 0.8rem;
+}
+.checkpoint-dots:last-child {
+    margin-bottom: 0;
+    margin-top: 0.8rem;
+}
+.checkpoint-card {
+    background: var(--white);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    max-width: 420px;
+}
+.checkpoint-done {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--success-dark);
+    margin-bottom: 0.3rem;
+}
+.checkpoint-summary {
+    font-size: 0.9rem;
+    color: var(--graphite-light);
+    margin-bottom: 1rem;
+}
+.checkpoint-next-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--graphite-lighter);
+    margin-bottom: 0.15rem;
+}
+.checkpoint-next {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    color: var(--deep-teal);
 }
 
 /* --- Details / More Info Toggle --- */

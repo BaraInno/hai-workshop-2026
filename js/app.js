@@ -603,6 +603,37 @@ function shareCertificate() {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.origin)}&title=${text}`, '_blank');
 }
 
+// === Section Tabs (scroll-to + highlight active) ===
+function initSectionTabs() {
+    const tabs = document.querySelectorAll('.section-tab[data-etappe]');
+    if (!tabs.length) return;
+
+    // Click to scroll
+    tabs.forEach(tab => {
+        tab.style.cursor = 'pointer';
+        tab.addEventListener('click', () => {
+            const id = 'etappe-' + tab.dataset.etappe;
+            const target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Highlight active tab on scroll
+    const etappeEls = document.querySelectorAll('.etappe-header[id]');
+    if (!etappeEls.length) return;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const num = entry.target.id.replace('etappe-', '');
+                tabs.forEach(t => t.classList.toggle('active', t.dataset.etappe === num));
+            }
+        });
+    }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+    etappeEls.forEach(el => observer.observe(el));
+}
+
 // === Init on Page Load ===
 document.addEventListener('DOMContentLoaded', () => {
     initNav();
@@ -610,6 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSubSteps();
     initPromptCopy();
     initScrollAnimations();
+    initSectionTabs();
     personalizeAll();
 
     // Page-specific init
