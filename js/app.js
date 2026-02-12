@@ -130,20 +130,30 @@ function initSteps() {
         num.textContent = '✓';
         num.classList.add('animate-check');
 
-        // Small celebration
         miniCelebrate(stepEl);
-
-        // Update progress
         updateChapterProgress();
 
-        // Check if chapter is complete
+        // Block-Ende: Erfolgs-Overlay + Confetti, dann zurück zum Hub oder Dashboard
+        const overlay = document.getElementById('block-success-overlay');
+        if (overlay && (
+            (area === 'zielbild' && stepId === 'step5') ||
+            (area === 'fitness' && stepId === 'step12') ||
+            (area === 'leidenschaft' && stepId === 'step5')
+        )) {
+            setTimeout(() => {
+                overlay.classList.add('visible');
+                overlay.setAttribute('aria-hidden', 'false');
+                bigCelebrate();
+            }, 500);
+            return;
+        }
+
         const doneCount = getAreaStepsDone(area);
         if (doneCount >= totalSteps) {
             setTimeout(() => bigCelebrate(), 600);
             return;
         }
 
-        // Open next step
         const next = index + 1;
         if (next < steps.length) {
             setTimeout(() => {
@@ -426,13 +436,22 @@ function initHub() {
         setTimeout(() => greetingEl.classList.add('visible'), 50);
     }
 
-    // Update hub card progress
     updateHubCards();
+
+    // Nach Block-Ende: Zur Startseite scrollen, damit Gleichung + Karten mittig sind
+    const params = new URLSearchParams(location.search);
+    if (params.has('from') && (params.get('from') === 'zielbild' || params.get('from') === 'fitness')) {
+        const target = document.querySelector('.equation-display');
+        if (target) {
+            setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+        }
+        history.replaceState({}, '', location.pathname);
+    }
 }
 
 function updateHubCards() {
     const areas = {
-        zielbild: { total: 7, selector: '.hub-card-gold' },
+        zielbild: { total: 5, selector: '.hub-card-gold' },
         fitness: { total: 12, selector: '.hub-card-teal' },
         leidenschaft: { total: 5, selector: '.hub-card-orange' },
     };
@@ -461,7 +480,7 @@ function initDashboard() {
 
 function renderTaskOverview() {
     const areas = {
-        zielbild: ['step1','step2','step3','step4','step5','step6','step7'],
+        zielbild: ['step1','step2','step3','step4','step5'],
         fitness: ['step1','step2','step3','step4','step5','step6','step7','step8','step9','step10','step11','step12'],
         leidenschaft: ['step1','step2','step3','step4','step5'],
     };
