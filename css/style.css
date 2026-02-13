@@ -1017,9 +1017,9 @@ p { margin-bottom: 1rem; }
 .tools-arena p { margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--graphite); }
 .tools-arena .btn { margin-top: 0.25rem; }
 
-/* Dashboard Störer (Promo zur KI-Prompts-Seite) */
+/* Dashboard Störer (Promo zur KI-Prompts-Seite) – direkt oberhalb Leaderboard, gut lesbar */
 .dashboard-storer {
-    margin: 2rem 0 2.5rem 0;
+    margin: 1.5rem 0 1rem 0;
 }
 .dashboard-storer .storer-link {
     display: flex;
@@ -1027,25 +1027,29 @@ p { margin-bottom: 1rem; }
     align-items: center;
     gap: 0.75rem 1rem;
     padding: 1.25rem 1.5rem;
-    background: linear-gradient(135deg, var(--future-horizon) 0%, var(--deep-teal) 100%);
+    background: var(--white);
     border-radius: var(--radius-lg);
-    color: var(--white);
+    border-left: 4px solid var(--solar-gold);
+    color: var(--graphite);
     text-decoration: none;
-    box-shadow: 0 4px 20px rgba(13, 95, 111, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 12px rgba(44, 44, 44, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .dashboard-storer .storer-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(13, 95, 111, 0.4);
-    color: var(--white);
+    box-shadow: 0 6px 20px rgba(44, 44, 44, 0.12);
+    color: var(--graphite);
+    border-left-color: var(--deep-solar-amber);
 }
 .dashboard-storer .storer-icon { font-size: 1.5rem; }
-.dashboard-storer .storer-text { flex: 1 1 280px; font-size: 0.95rem; line-height: 1.5; }
+.dashboard-storer .storer-text { flex: 1 1 280px; font-size: 0.95rem; line-height: 1.5; color: var(--graphite); }
+.dashboard-storer .storer-text strong { color: var(--graphite); }
 .dashboard-storer .storer-cta {
     font-weight: 600;
     white-space: nowrap;
-    opacity: 0.95;
+    color: var(--deep-teal);
 }
+.dashboard-storer .storer-link:hover .storer-cta { color: var(--deep-solar-amber); }
 @media (max-width: 480px) {
     .dashboard-storer .storer-link { flex-direction: column; align-items: flex-start; }
 }
